@@ -1,20 +1,25 @@
 <?php
 
-//error reporting
-ini_set('display_errors', 1);
+//turn on error reporting
+ini_set('display_errors',1);
 error_reporting(E_ALL);
 
-
+//require autoload file
 require_once('vendor/autoload.php');
 
+
+//create an instance of the base class
 $f3 = Base::instance();
 
-$f3->route('GET|POST /', function (){
-    echo "<h1>My Pets</h1>";
-    echo "<a href='order'>Order a Pet</a>";
+//session starts
+session_start();
 
-});
-
+$f3->route('GET /', function ()
+{
+    echo '<h1>My Pets</h1>';
+    echo '<a href="order">Order a Pet</a>';
+}
+);
 $f3->route('GET /@animal', function($f3, $params)
 {
     if($params['animal']=='dog')
@@ -45,3 +50,6 @@ $f3->route("GET|POST /results", function($f3){
     $view = new Template();
     echo $view->render("views/results.html");
 });
+
+$f3->run();
+?>
