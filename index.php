@@ -10,6 +10,6 @@ require_once('vendor/autoload.php');
 $f3 = Base::instance();
 
 $f3->route('GET|POST /', function (){
-    $view = new Template();
-    echo $view->render('views/home.html');
+    echo "<h1>My Pets</h1>h1>";
+    echo "<a href='order'>Order a Pet</a>";
 });
