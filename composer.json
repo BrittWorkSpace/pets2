@@ -1,0 +1,17 @@
+{
+  "name": "rhillgre/328/",
+  "authors" : [
+    {
+      "name": "Andrew Harrington",
+      "email" : "aharrington4@mail.greenriver.edu"
+    },
+    {
+      "name": "Michael Britt",
+      "email" : "mbritt3@mail.greenriver.edu"
+    }
+
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  }
+}
