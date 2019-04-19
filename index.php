@@ -21,13 +21,12 @@ $f3->route('GET /@animal', function($f3, $params)
     {
         echo "woof";
     }
-    else if( $params['anmila']=='cat')
+    else if( $params['animal']=='cat')
     {
         echo "meow";
     }
     else
     {
-        echo "ManBearPig";
+        $f3->error(404);
     }
-}
-);
+});
