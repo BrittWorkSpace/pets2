@@ -30,3 +30,18 @@ $f3->route('GET /@animal', function($f3, $params)
         $f3->error(404);
     }
 });
+
+$f3->route("GET|POST /order", function($f3){
+    $view = new Template();
+    echo $view->render("views/views.html");
+});
+
+$f3->route("GET|POST /order2", function($f3){
+    $view = new Template();
+    echo $view->render("views/views2.html");
+});
+
+$f3->route("GET|POST /results", function($f3){
+    $view = new Template();
+    echo $view->render("views/results.html");
+});
