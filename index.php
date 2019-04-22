@@ -44,11 +44,13 @@ $f3->route("GET|POST /order", function($f3){
 $f3->route("GET|POST /order2", function($f3){
     $view = new Template();
     echo $view->render("views/views2.html");
+    $_SESSION['animal'] = $_POST[name];
 });
 
 $f3->route("GET|POST /results", function($f3){
     $view = new Template();
     echo $view->render("views/results.html");
+    $_SESSION['color'] = $_POST[color];
 });
 
 $f3->run();
